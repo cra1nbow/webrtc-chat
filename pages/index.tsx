@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Router from 'next/router';
 import { FormEvent, useState } from 'react';
 import styled from 'styled-components';
 
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
 
   const handleJoin = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    Router.push(`/join/${code}`);
     setCode('');
   };
 
